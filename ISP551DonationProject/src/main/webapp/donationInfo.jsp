@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<h1>hello world, i am cute</h1>
 	Donation No: <c:out value="${param.donationNo}"/><br>
 	Donation Type: <c:out value="${param.donationType}"/><br>
 	Date: <c:out value="${param.donationDate}"/><br>
