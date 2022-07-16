@@ -138,12 +138,12 @@
 			<form action="UpdateDonationController" method="post">
 		<div class="inner-wrap">
 		<label>Donation Type:</label>
-		<input type="text" name="donationType" value="<c:out value="${d.donationType}"/>"/><br>
+		<input type="text" name="donationtype" value="<c:out value="${d.donationType}"/>"/><br>
 		<label>Date:</label>
-		<input type="date" name="donationDate" value="<c:out value="${d.donationDate}"/>"/><br>
+		<input type="date" name="donationdate" value="<c:out value="${d.donationDate}"/>"/><br>
 		<label>Total:</label>
-		<input type="text" name="donationTotal" value="<c:out value="${d.donationTotal}"/>"/><br>
-		<input type="hidden" name="donationNo" value="<c:out value="${d.donationNo}"/>"/><br><br>
+		<input type="text" name="donationtotal" value="<c:out value="${d.donationTotal}"/>"/><br>
+		<input type="hidden" name="donationno" value="<c:out value="${d.donationNo}"/>"/><br><br>
 		</div>
 		
 		<div class="button-section">

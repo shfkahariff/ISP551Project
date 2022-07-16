@@ -50,13 +50,13 @@
 	<h1>Donation Details</h1>
 	
 	<h3>Donation No </h3>
-	<div class="input"><c:out value="${d.donationNo}"/></div>
+	<div class="input"><c:out value="${d.donationno}"/></div>
 	<h3>Donation Type</h3>
-	<div class="input"><c:out value="${d.donationType}"/></div>
+	<div class="input"><c:out value="${d.donationtype}"/></div>
 	<h3>Date</h3>
-	<div class="input"><c:out value="${d.donationDate}"/></div>
+	<div class="input"><c:out value="${d.donationdate}"/></div>
 	<h3>Total</h3>
-	<div class="input">RM <c:out value="${d.donationTotal}"/> </div>
+	<div class="input">RM <c:out value="${d.donationtotal}"/> </div>
 	
 	<br><br>
 	<div class="wrapper">

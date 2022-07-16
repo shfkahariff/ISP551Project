@@ -26,8 +26,8 @@ public class ViewDonationController extends HttpServlet{
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int donationNo = Integer.parseInt(request.getParameter("donationNo"));
-		request.setAttribute("d", DonationDAO.getDonationById(donationNo));
+		int donationno = Integer.parseInt(request.getParameter("donationno"));
+		request.setAttribute("d", DonationDAO.getDonationById(donationno));
 		RequestDispatcher view = request.getRequestDispatcher("viewDonation.jsp");
 		view.forward(request, response);
 	}

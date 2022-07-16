@@ -194,15 +194,15 @@
           <div class="item">
           </div>
           <div class="item">
-            <label for="donationType">Donation Type<span>*</span></label>
+            <label for="donationtype">Donation Type<span>*</span></label>
             <input type="text" id="donationtype" name="donationtype" required><br>
           </div>
           <div class="item">
-            <label for="donationDate">Date<span>*</span></label>
+            <label for="donationdate">Date<span>*</span></label>
             <input type="date" id="donationdate" name="donationdate">
           </div>
           <div class="item">
-            <label for="donationTotal">Total<span>*</span></label>
+            <label for="donationtotal">Total<span>*</span></label>
             <input id="donationtotal" type="text" name="donationtotal" min="1" step="any" required/>
           </div>
           <button type="submit" value="save">Save</button>

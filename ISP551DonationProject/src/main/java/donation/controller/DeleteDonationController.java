@@ -21,7 +21,7 @@ public class DeleteDonationController extends HttpServlet {
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		int donationNo = Integer.parseInt(request.getParameter("donationNo"));
+		int donationNo = Integer.parseInt(request.getParameter("donationno"));
 		dao.deleteDonation(donationNo);
 		request.setAttribute("donations", DonationDAO.getAllDonations());
 		RequestDispatcher view = request.getRequestDispatcher("listDonation.jsp");
