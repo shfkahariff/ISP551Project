@@ -1,44 +1,46 @@
 package donation.model;
 
 public class Donation {
-	private int donationNo;
-	private String donationType;
-	private String donationDate;
-	private double donationTotal;
+	private int donationno;
+	private String donationtype;
+	private String donationdate;
+	private double donationtotal;
 	
 	public Donation() {
 		
 	}
 
-	public int getDonationNo() {
-		return donationNo;
+	public int getDonationno() {
+		return donationno;
 	}
 
-	public void setDonationNo(int donationNo) {
-		this.donationNo = donationNo;
+	public void setDonationno(int donationno) {
+		this.donationno = donationno;
 	}
 
-	public String getDonationType() {
-		return donationType;
+	public String getDonationtype() {
+		return donationtype;
 	}
 
-	public void setDonationType(String donationType) {
-		this.donationType = donationType;
+	public void setDonationtype(String donationtype) {
+		this.donationtype = donationtype;
 	}
 
-	public String getDonationDate() {
-		return donationDate;
+	public String getDonationdate() {
+		return donationdate;
 	}
 
-	public void setDonationDate(String donationDate) {
-		this.donationDate = donationDate;
+	public void setDonationdate(String donationdate) {
+		this.donationdate = donationdate;
 	}
 
-	public double getDonationTotal() {
-		return donationTotal;
+	public double getDonationtotal() {
+		return donationtotal;
 	}
 
-	public void setDonationTotal(double donationTotal) {
-		this.donationTotal = donationTotal;
+	public void setDonationtotal(double donationtotal) {
+		this.donationtotal = donationtotal;
 	}
+
+
 }

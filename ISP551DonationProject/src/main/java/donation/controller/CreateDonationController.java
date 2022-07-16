@@ -29,9 +29,9 @@ public class CreateDonationController extends HttpServlet {
         // TODO Auto-generated constructor stub
     	
     	Donation d = new Donation();
-    	d.setDonationType(request.getParameter("donationType"));
-    	d.setDonationDate(request.getParameter("donationDate"));
-    	d.setDonationTotal(Double.parseDouble(request.getParameter("donationTotal")));
+    	d.setDonationtype(request.getParameter("donationtype"));
+    	d.setDonationdate(request.getParameter("donationdate"));
+    	d.setDonationtotal(Double.parseDouble(request.getParameter("donationtotal")));
     	
     	dao.createDonation(d);
     	

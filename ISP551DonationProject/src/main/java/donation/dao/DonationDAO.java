@@ -10,25 +10,25 @@ public class DonationDAO {
 	static PreparedStatement ps = null;
 	static Statement st = null;
 	static ResultSet rs = null;
-	private int donationNo;
-	private String donationDate, donationType;
-	private double donationTotal;
+	private int donationno;
+	private String donationdate, donationtype;
+	private double donationtotal;
 	
 	//create/add new donation
 	public void createDonation(Donation bean) {
-		donationType = bean.getDonationType();
-		donationDate = bean.getDonationDate();
-		donationTotal = bean.getDonationTotal();
+		donationtype = bean.getDonationtype();
+		donationdate = bean.getDonationdate();
+		donationtotal = bean.getDonationtotal();
 		
 		try {
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 			
 			//create statement
-			ps = con.prepareStatement("INSERT INTO donation(donationType,donationDate,donationTotal)VALUES(?,?,?)");
-			ps.setString(1, donationType);
-			ps.setString(2, donationDate);
-			ps.setDouble(3, donationTotal);
+			ps = con.prepareStatement("INSERT INTO donation(donationtype,donationdate,donationtotal)VALUES(?,?,?)");
+			ps.setString(1, donationtype);
+			ps.setString(2, donationdate);
+			ps.setDouble(3, donationtotal);
 			//execute query
 			ps.executeUpdate();
 			System.out.println("Successfully inserted");
@@ -51,7 +51,7 @@ public class DonationDAO {
 			
 			//create statement
 			st = con.createStatement();
-			String sql = "SELECT * FROM donation ORDER BY donationNo";
+			String sql = "SELECT * FROM donation ORDER BY donationno";
 			
 			//execute query
 			rs = st.executeQuery(sql);
@@ -59,10 +59,10 @@ public class DonationDAO {
 			//process result
 			while(rs.next()) {
 				Donation d = new Donation();
-				d.setDonationNo(rs.getInt("donationNo"));
-				d.setDonationType(rs.getString("donationType"));
-				d.setDonationDate(rs.getString("donationDate"));
-				d.setDonationTotal(rs.getDouble("donationTotal"));
+				d.setDonationno(rs.getInt("donationno"));
+				d.setDonationtype(rs.getString("donationtype"));
+				d.setDonationdate(rs.getString("donationdate"));
+				d.setDonationtotal(rs.getDouble("donationtotal"));
 				
 				donations.add(d);
 }
@@ -78,23 +78,23 @@ public class DonationDAO {
 	}
 	
 	//get donation by donationNo
-	public static Donation getDonationById(int donationNo) {
+	public static Donation getDonationById(int donationno) {
 		Donation d = new Donation();
 		try {
 			//call getConnection method
 			con = ConnectionManager.getConnection();
 			
 			//create statement
-			ps= con.prepareStatement("SELECT * FROM donation WHERE donationNo=?");
-			ps.setInt(1, donationNo);
+			ps= con.prepareStatement("SELECT * FROM donation WHERE donationno=?");
+			ps.setInt(1, donationno);
 			
 			//execute query
 			rs = ps.executeQuery();
 			if(rs.next()) {
-				d.setDonationNo(rs.getInt("donationNo"));
-				d.setDonationType(rs.getString("donationType"));
-				d.setDonationDate(rs.getString("donationDate"));
-				d.setDonationTotal(rs.getDouble("donationTotal"));
+				d.setDonationno(rs.getInt("donationno"));
+				d.setDonationtype(rs.getString("donationtype"));
+				d.setDonationdate(rs.getString("donationdate"));
+				d.setDonationtotal(rs.getDouble("donationtotal"));
 			}
 			//close connection
 			con.close();
@@ -107,14 +107,14 @@ public class DonationDAO {
 	}
 	
 	//delete donation
-	public void deleteDonation(int donationNo) {
+	public void deleteDonation(int donationno) {
 		try {
 			//call getConnection method
 			con = ConnectionManager.getConnection();
 			
 			//create statement
-			ps = con.prepareStatement("DELETE FROM donation WHERE donationNo=?");
-			ps.setInt(1, donationNo);
+			ps = con.prepareStatement("DELETE FROM donation WHERE donationno=?");
+			ps.setInt(1, donationno);
 			
 			//execute query
 			ps.executeUpdate();
@@ -129,21 +129,21 @@ public class DonationDAO {
 	
 	//update donation
 	public void updateDonation(Donation bean) {
-		donationNo = bean.getDonationNo();
-		donationType = bean.getDonationType();
-		donationDate = bean.getDonationDate();
-		donationTotal = bean.getDonationTotal();
+		donationno = bean.getDonationno();
+		donationtype = bean.getDonationtype();
+		donationdate = bean.getDonationdate();
+		donationtotal = bean.getDonationtotal();
 		
 		try {
 			//call getConnection method
 			con = ConnectionManager.getConnection();
 			
 			//create statement
-			ps = con.prepareStatement("UPDATE donation SET donationType=?, donationDate=?, donationTotal=? WHERE donationNo=?");
-			ps.setString(1, donationType);
-			ps.setString(2, donationDate);
-			ps.setDouble(3, donationTotal);
-			ps.setInt(4, donationNo);
+			ps = con.prepareStatement("UPDATE donation SET donationtype=?, donationdate=?, donationtotal=? WHERE donationno=?");
+			ps.setString(1, donationtype);
+			ps.setString(2, donationdate);
+			ps.setDouble(3, donationtotal);
+			ps.setInt(4, donationno);
 			
 			//execute query
 			ps.executeUpdate();

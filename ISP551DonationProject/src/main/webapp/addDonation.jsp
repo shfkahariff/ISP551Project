@@ -195,15 +195,15 @@
           </div>
           <div class="item">
             <label for="donationType">Donation Type<span>*</span></label>
-            <input type="text" name="donationType" required><br>
+            <input type="text" id="donationtype" name="donationtype" required><br>
           </div>
           <div class="item">
             <label for="donationDate">Date<span>*</span></label>
-            <input type="date" id="date" name="donationDate">
+            <input type="date" id="donationdate" name="donationdate">
           </div>
           <div class="item">
             <label for="donationTotal">Total<span>*</span></label>
-            <input id="total" type="text" name="donationTotal" min="1" step="any" required/>
+            <input id="donationtotal" type="text" name="donationtotal" min="1" step="any" required/>
           </div>
           <button type="submit" value="save">Save</button>
           <button type="reset" value="reset">Reset</button>

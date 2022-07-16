@@ -40,14 +40,14 @@ h1 {
 			</tr>
 			<c:forEach  items="${donations}" var="d" varStatus="donations">
 			<tr>
-				<td><c:out value="${d.donationNo}" /></td>
-				<td><c:out value="${d.donationType}" /></td>
-				<td><c:out value="${d.donationDate}" /></td>
-				<td><c:out value="${d.donationTotal}" /></td>
+				<td><c:out value="${d.donationno}" /></td>
+				<td><c:out value="${d.donationtype}" /></td>
+				<td><c:out value="${d.donationdate}" /></td>
+				<td><c:out value="${d.donationtotal}" /></td>
 							
-				<td><a class="btn btn-primary" href="ViewDonationController?donationNo=<c:out value="${d.donationNo}"/>">View</a></td>
-				<td><a class="btn btn-primary" href="UpdateDonationController?donationNo=<c:out value="${d.donationNo}"/>">Update</a></td>
-				<td><a class="btn btn-primary" href="DeleteDonationController?donationNo=<c:out value="${d.donationNo}"/>">Delete</a></td>
+				<td><a class="btn btn-primary" href="ViewDonationController?donationNo=<c:out value="${d.donationno}"/>">View</a></td>
+				<td><a class="btn btn-primary" href="UpdateDonationController?donationNo=<c:out value="${d.donationno}"/>">Update</a></td>
+				<td><a class="btn btn-primary" href="DeleteDonationController?donationNo=<c:out value="${d.donationno}"/>">Delete</a></td>
 			</tr>
 			</c:forEach>
 		</table>
