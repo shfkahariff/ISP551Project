@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style >
+	*{
+    font-family: Georgia, serif;
+}
+html, body {
+    min-height: 100%;
+}
+body{
+	background-color: #f3c3b0;
+}
+
+.center{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: auto;
+	width:20%;
+}
+header {
+      background-color: #E5A186;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 15vh;
+      box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+}
+h1 {
+      letter-spacing: 1.5vw;
+      font-family: 'system-ui';
+      text-transform: uppercase;
+      text-align: center;
+}
+.center2 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button{
+	background-color: #fff;
+	color: black;
+	text-align: center;
+	font-size: 16px;
+	padding: 15px 32px;
+}
+.container{
+	margin: 50px;
+}
+button {
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #ebebe0;
+      font-size: 16px;
+      color: black;
+      cursor: pointer;
+}
+button:hover {
+      background:  #a3c2c2;
+}
+</style>
+</head>
+<body>
+	<header>
+        <h1>Surau As Sakeenah</h1>
+</header>
+<div class="container">
+	<img src="https://www.pngall.com/wp-content/uploads/7/Donation-Symbol-PNG.png" class="center">
+<h1>What is your role?</h1><br><br>
+<div class="center2">
+	<button onclick="location.href='beneficiarylogin.html'" type="button">Beneficiary</button>
+	<button onclick="location.href='adminlogin.html'" type="button">Admin</button>
+</div>
+</div>
+</body>
+</html>
