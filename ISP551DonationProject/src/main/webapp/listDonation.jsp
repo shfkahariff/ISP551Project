@@ -45,9 +45,9 @@ h1 {
 				<td><c:out value="${d.donationdate}" /></td>
 				<td><c:out value="${d.donationtotal}" /></td>
 							
-				<td><a class="btn btn-primary" href="ViewDonationController?donationNo=<c:out value="${d.donationno}"/>">View</a></td>
-				<td><a class="btn btn-primary" href="UpdateDonationController?donationNo=<c:out value="${d.donationno}"/>">Update</a></td>
-				<td><a class="btn btn-primary" href="DeleteDonationController?donationNo=<c:out value="${d.donationno}"/>">Delete</a></td>
+				<td><a class="btn btn-primary" href="ViewDonationController?donationno=<c:out value="${d.donationno}"/>">View</a></td>
+				<td><a class="btn btn-primary" href="UpdateDonationController?donationno=<c:out value="${d.donationno}"/>">Update</a></td>
+				<td><a class="btn btn-primary" href="DeleteDonationController?donationno=<c:out value="${d.donationno}"/>">Delete</a></td>
 			</tr>
 			</c:forEach>
 		</table>
