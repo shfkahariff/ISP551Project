@@ -36,10 +36,10 @@ public class UpdateDonationController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
     	Donation d = new Donation();
-    	d.setDonationno(Integer.parseInt(request.getParameter("donationNo")));
-    	d.setDonationtype(request.getParameter("donationType"));
-    	d.setDonationdate(request.getParameter("donationDate"));
-    	d.setDonationtotal(Double.parseDouble(request.getParameter("donationTotal")));
+    	d.setDonationno(Integer.parseInt(request.getParameter("donationno")));
+    	d.setDonationtype(request.getParameter("donationtype"));
+    	d.setDonationdate(request.getParameter("donationdate"));
+    	d.setDonationtotal(Double.parseDouble(request.getParameter("donationtotal")));
     	
     	dao.updateDonation(d);
     	
